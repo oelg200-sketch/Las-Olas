@@ -13,5 +13,5 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
-  base: '/Las-Olas.git/',
+  base: '/Las-Olas/',
 });
