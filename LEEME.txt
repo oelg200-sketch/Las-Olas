@@ -1,0 +1,5 @@
+Balneario Las Olas - sitio estatico (solo HTML, CSS y JavaScript)
+
+Archivos: index.html, styles.css, script.js, favicon.svg
+Para GitHub Pages: sube estos 4 archivos a la RAIZ del repositorio (nada de carpetas ni package.json).
+En Settings > Pages elige "Deploy from a branch", rama main, carpeta / (root).

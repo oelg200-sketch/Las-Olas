@@ -1,14 +1,368 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Balneario Las Olas | Tu Paraíso Turístico en la Costa</title>
-    <meta name="twitter:card" content="summary" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Balneario Las Olas | Tu Paraíso Turístico en la Costa</title>
+<meta name="description" content="Balneario Las Olas: piscinas naturales, aguas termales, restaurante gourmet, cabañas y mucho más en la costa.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="nav" id="navbar">
+  <div class="container">
+    <div class="nav-row">
+      <a href="#inicio" class="logo">
+        <span class="logo-icon"><svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg><span class="logo-glow"></span></span>
+        <span class="logo-text"><span class="logo-name">Las Olas</span><span class="logo-sub">Balneario</span></span>
+      </a>
+      <div class="nav-links">
+        <a href="#inicio" class="nav-link">Inicio<span class="nav-underline"></span></a>
+        <a href="#nosotros" class="nav-link">Nosotros<span class="nav-underline"></span></a>
+        <a href="#servicios" class="nav-link">Servicios<span class="nav-underline"></span></a>
+        <a href="#galeria" class="nav-link">Galería<span class="nav-underline"></span></a>
+        <a href="#ubicacion" class="nav-link">Ubicación<span class="nav-underline"></span></a>
+        <a href="#contacto" class="nav-link">Contacto<span class="nav-underline"></span></a>
+        <a href="#contacto" class="btn-nav">Reservar</a>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span id="iconMenu"><svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg></span><span id="iconClose" hidden><svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <a href="#inicio" class="mobile-link">Inicio</a>
+      <a href="#nosotros" class="mobile-link">Nosotros</a>
+      <a href="#servicios" class="mobile-link">Servicios</a>
+      <a href="#galeria" class="mobile-link">Galería</a>
+      <a href="#ubicacion" class="mobile-link">Ubicación</a>
+      <a href="#contacto" class="mobile-link">Contacto</a>
+      <a href="#contacto" class="mobile-cta">Reservar</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="inicio" class="hero">
+  <div class="hero-bg">
+    <img src="https://images.pexels.com/photos/261101/pexels-photo-261101.jpeg?auto=compress&cs=tinysrgb&h=1080&w=1920" alt="Balneario Las Olas - piscina tropical">
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="bubbles" id="bubbles"></div>
+  <div class="hero-content">
+    <div class="badge-hero glass-dark fade-up"><svg class="icon fill-teal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><span>Destino turístico #1 en la región</span></div>
+    <h1 class="hero-title fade-up" style="animation-delay:.1s">Balneario<span class="gradient-text">Las Olas</span></h1>
+    <p class="hero-text fade-up" style="animation-delay:.2s">Sumérgete en aguas cristalinas, relájate bajo el sol y vive una experiencia inolvidable en el paraíso turístico más hermoso de la costa.</p>
+    <div class="hero-cta fade-up" style="animation-delay:.3s">
+      <a href="#contacto" class="btn-primary btn-lg">Reservar Ahora</a>
+      <a href="#servicios" class="btn-glass">Explorar Servicios</a>
+    </div>
+    <div class="quick-info fade-up" style="animation-delay:.4s">
+      <div class="quick-card glass-dark"><svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><p class="qc-title">Costa Dorada</p><p class="qc-sub">Ubicación</p></div>
+      <div class="quick-card glass-dark"><svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg><p class="qc-title">Todo el año</p><p class="qc-sub">Abierto</p></div>
+      <div class="quick-card glass-dark"><svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><p class="qc-title">+50,000</p><p class="qc-sub">Visitantes</p></div>
+    </div>
+  </div>
+  <div class="scroll-ind"><svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></div>
+  <div class="hero-wave"><svg class="" viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,60 C240,100 480,20 720,50 C960,80 1200,110 1440,60 L1440,120 L0,120 Z" fill="#f0f9ff"><animate attributeName="d" dur="8s" repeatCount="indefinite" values="M0,60 C240,100 480,20 720,50 C960,80 1200,110 1440,60 L1440,120 L0,120 Z;M0,70 C240,30 480,100 720,60 C960,20 1200,50 1440,80 L1440,120 L0,120 Z;M0,60 C240,100 480,20 720,50 C960,80 1200,110 1440,60 L1440,120 L0,120 Z"/></path><path d="M0,80 C240,40 480,110 720,70 C960,30 1200,60 1444,90 L1444,120 L0,120 Z" fill="#e0f2fe" fill-opacity=".6"><animate attributeName="d" dur="6s" repeatCount="indefinite" values="M0,80 C240,40 480,110 720,70 C960,30 1200,60 1444,90 L1444,120 L0,120 Z;M0,90 C240,60 480,30 720,80 C960,110 1200,40 1444,70 L1444,120 L0,120 Z;M0,80 C240,40 480,110 720,70 C960,30 1200,60 1444,90 L1444,120 L0,120 Z"/></path></svg></div>
+</section>
+
+<!-- NOSOTROS -->
+<section id="nosotros" class="section bg-50 about">
+  <div class="about-deco"><svg viewBox="0 0 1440 200" preserveAspectRatio="none"><path d="M0,100 Q360,200 720,100 T1440,100 L1440,200 L0,200 Z" fill="#0c4a6e"/></svg></div>
+  <div class="container rel">
+    <div class="grid-2 about-grid">
+      <div class="collage-wrap">
+        <div class="collage">
+          <div class="col">
+            <div class="img-card ar-34"><img src="https://images.pexels.com/photos/13245235/pexels-photo-13245235.jpeg?auto=compress&cs=tinysrgb&h=650&w=500" alt="Piscinas termales naturales"></div>
+            <div class="img-card ar-1"><img src="https://images.pexels.com/photos/635126/pexels-photo-635126.jpeg?auto=compress&cs=tinysrgb&h=400&w=400" alt="Área de descanso junto a la piscina"></div>
+          </div>
+          <div class="col pt-8">
+            <div class="img-card ar-1"><img src="https://images.pexels.com/photos/5362213/pexels-photo-5362213.jpeg?auto=compress&cs=tinysrgb&h=400&w=400" alt="Piscina infinita con vista al mar"></div>
+            <div class="img-card ar-34"><img src="https://images.pexels.com/photos/6910147/pexels-photo-6910147.jpeg?auto=compress&cs=tinysrgb&h=650&w=500" alt="Playa tropical con palmeras"></div>
+          </div>
+        </div>
+        <div class="float-badge">
+          <div class="fb-icon"><svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+          <div><p class="fb-num">15+</p><p class="fb-text">Años de experiencia</p></div>
+        </div>
+      </div>
+      <div>
+        <span class="pill">Sobre Nosotros</span>
+        <h2 class="h2 mb-6">Un paraíso natural donde el<span class="teal"> agua y la serenidad </span>se encuentran</h2>
+        <p class="lead mb-8 c700">En Balneario Las Olas ofrecemos una experiencia única de relajación y diversión. Nuestras instalaciones combinan la belleza natural del entorno con comodidades de primer nivel, creando el destino perfecto para escapar del estrés cotidiano y reconectar con la naturaleza.</p>
+        <div class="features">
+          <div class="feature"><div class="feature-icon"><svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg></div><h3>Aguas Cristalinas</h3><p>Piscinas naturales y termales con agua de manantial pura y cristalina, ideales para relajarse.</p></div>
+          <div class="feature"><div class="feature-icon"><svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></div><h3>Sol Todo el Año</h3><p>Disfruta de un clima privilegiado con más de 300 días de sol al año en un entorno paradisíaco.</p></div>
+          <div class="feature"><div class="feature-icon"><svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div><h3>Naturaleza Virgen</h3><p>Rodeado de vegetación exuberante y paisajes naturales que te conectarán con la esencia del lugar.</p></div>
+          <div class="feature"><div class="feature-icon"><svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></div><h3>Calidad Premium</h3><p>Certificado como uno de los mejores balnearios de la región por su excelencia en servicio.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="section services">
+  <div class="container">
+    <div class="sec-head">
+      <span class="pill">Nuestros Servicios</span>
+      <h2 class="h2 mb-4">Todo lo que necesitas para<span class="teal"> vacaciones perfectas</span></h2>
+      <p class="lead">Ofrecemos una amplia gama de servicios pensados para que tu visita sea una experiencia completa e inolvidable.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service">
+        <div class="service-img">
+          <img src="https://images.pexels.com/photos/261101/pexels-photo-261101.jpeg?auto=compress&cs=tinysrgb&h=400&w=600" alt="Piscinas Naturales" loading="lazy">
+          <div class="service-shade"></div>
+          <span class="service-tag">Más popular</span>
+          <div class="service-icon"><svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg></div>
+        </div>
+        <div class="service-body">
+          <h3>Piscinas Naturales</h3>
+          <p>Piscinas de agua cristalina alimentadas por manantiales naturales, con diferentes profundidades para todas las edades.</p>
+          <a href="#contacto" class="more">Más información<svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        </div>
+        <div class="service-bar"></div>
+      </div>
+      <div class="service">
+        <div class="service-img">
+          <img src="https://images.pexels.com/photos/13245235/pexels-photo-13245235.jpeg?auto=compress&cs=tinysrgb&h=400&w=600" alt="Aguas Termales" loading="lazy">
+          <div class="service-shade"></div>
+          <span class="service-tag">Bienestar</span>
+          <div class="service-icon"><svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.683 3 4 3.683 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/><line x1="10" x2="8" y1="5" y2="7"/><line x1="2" x2="22" y1="12" y2="12"/><line x1="7" x2="7" y1="19" y2="21"/><line x1="17" x2="17" y1="19" y2="21"/></svg></div>
+        </div>
+        <div class="service-body">
+          <h3>Aguas Termales</h3>
+          <p>Relájate en nuestras piscinas termales con propiedades curativas y relajantes, ideales para el bienestar.</p>
+          <a href="#contacto" class="more">Más información<svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        </div>
+        <div class="service-bar"></div>
+      </div>
+      <div class="service">
+        <div class="service-img">
+          <img src="https://images.pexels.com/photos/635126/pexels-photo-635126.jpeg?auto=compress&cs=tinysrgb&h=400&w=600" alt="Restaurante Gourmet" loading="lazy">
+          <div class="service-shade"></div>
+          <span class="service-tag">Gastronomía</span>
+          <div class="service-icon"><svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 2-2.3 2.3a3 3 0 0 0 0 4.2l1.8 1.8a3 3 0 0 0 4.2 0L22 8"/><path d="M15 15 3.3 3.3a4.2 4.2 0 0 0 0 6l7.3 7.3c.7.7 2 .7 2.8 0L15 15Zm0 0 7 7"/><path d="m2.1 21.8 6.4-6.3"/><path d="m19 5-7 7"/></svg></div>
+        </div>
+        <div class="service-body">
+          <h3>Restaurante Gourmet</h3>
+          <p>Cocina local e internacional con ingredientes frescos de la región, junto a las piscinas con vista al mar.</p>
+          <a href="#contacto" class="more">Más información<svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        </div>
+        <div class="service-bar"></div>
+      </div>
+      <div class="service">
+        <div class="service-img">
+          <img src="https://images.pexels.com/photos/19450437/pexels-photo-19450437.jpeg?auto=compress&cs=tinysrgb&h=400&w=600" alt="Zona de Acampada" loading="lazy">
+          <div class="service-shade"></div>
+          <span class="service-tag">Aventura</span>
+          <div class="service-icon"><svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 21 14 3"/><path d="M20.5 21 10 3"/><path d="M15.5 21 12 15l-3.5 6"/><path d="M2 21h20"/></svg></div>
+        </div>
+        <div class="service-body">
+          <h3>Zona de Acampada</h3>
+          <p>Áreas delimitadas para acampar bajo las estrellas, rodeadas de naturaleza y con todas las comodidades.</p>
+          <a href="#contacto" class="more">Más información<svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        </div>
+        <div class="service-bar"></div>
+      </div>
+      <div class="service">
+        <div class="service-img">
+          <img src="https://images.pexels.com/photos/33836952/pexels-photo-33836952.jpeg?auto=compress&cs=tinysrgb&h=400&w=600" alt="Actividades Deportivas" loading="lazy">
+          <div class="service-shade"></div>
+          <span class="service-tag">Diversión</span>
+          <div class="service-icon"><svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6.5 6.5 11 11"/><path d="m21 21-1-1"/><path d="m3 3 1 1"/><path d="m18 22 4-4"/><path d="m2 6 4-4"/><path d="m3 10 7-7"/><path d="m14 21 7-7"/></svg></div>
+        </div>
+        <div class="service-body">
+          <h3>Actividades Deportivas</h3>
+          <p>Voleibol de playa, kayak, paddle board y más actividades acuáticas y deportivas para toda la familia.</p>
+          <a href="#contacto" class="more">Más información<svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        </div>
+        <div class="service-bar"></div>
+      </div>
+      <div class="service">
+        <div class="service-img">
+          <img src="https://images.pexels.com/photos/5362213/pexels-photo-5362213.jpeg?auto=compress&cs=tinysrgb&h=400&w=600" alt="Cabañas Premium" loading="lazy">
+          <div class="service-shade"></div>
+          <span class="service-tag">Estadía</span>
+          <div class="service-icon"><svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" x2="12.01" y1="20" y2="20"/></svg></div>
+        </div>
+        <div class="service-body">
+          <h3>Cabañas Premium</h3>
+          <p>Alojamiento confortable con todas las comodidades: WiFi, aire acondicionado y vista directa al mar.</p>
+          <a href="#contacto" class="more">Más información<svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        </div>
+        <div class="service-bar"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section id="galeria" class="section gallery bg-100">
+  <div class="container">
+    <div class="sec-head">
+      <span class="pill">Galería</span>
+      <h2 class="h2 mb-4">Descubre la<span class="teal"> belleza </span>de nuestro paraíso</h2>
+      <p class="lead">Cada rincón de Las Olas está diseñado para ofrecerte una experiencia visual y sensorial inigualable.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="g-item g-big" data-index="0" tabindex="0" role="button" aria-label="Ampliar: Piscina tropical con palmeras">
+        <div class="g-img"><img src="https://images.pexels.com/photos/261101/pexels-photo-261101.jpeg?auto=compress&cs=tinysrgb&h=800&w=1200" alt="Piscina tropical con palmeras" loading="lazy"></div>
+        <div class="g-shade"></div>
+        <div class="g-caption"><span>Piscinas</span><p>Piscina tropical con palmeras</p></div>
+      </div>
+      <div class="g-item" data-index="1" tabindex="0" role="button" aria-label="Ampliar: Aguas termales naturales">
+        <div class="g-img"><img src="https://images.pexels.com/photos/13245235/pexels-photo-13245235.jpeg?auto=compress&cs=tinysrgb&h=800&w=1200" alt="Aguas termales naturales" loading="lazy"></div>
+        <div class="g-shade"></div>
+        <div class="g-caption"><span>Termales</span><p>Aguas termales naturales</p></div>
+      </div>
+      <div class="g-item" data-index="2" tabindex="0" role="button" aria-label="Ampliar: Playa tropical con palmeras">
+        <div class="g-img"><img src="https://images.pexels.com/photos/6910147/pexels-photo-6910147.jpeg?auto=compress&cs=tinysrgb&h=800&w=1200" alt="Playa tropical con palmeras" loading="lazy"></div>
+        <div class="g-shade"></div>
+        <div class="g-caption"><span>Naturaleza</span><p>Playa tropical con palmeras</p></div>
+      </div>
+      <div class="g-item g-wide" data-index="3" tabindex="0" role="button" aria-label="Ampliar: Piscina infinita">
+        <div class="g-img"><img src="https://images.pexels.com/photos/5362213/pexels-photo-5362213.jpeg?auto=compress&cs=tinysrgb&h=800&w=1200" alt="Piscina infinita" loading="lazy"></div>
+        <div class="g-shade"></div>
+        <div class="g-caption"><span>Piscinas</span><p>Piscina infinita</p></div>
+      </div>
+      <div class="g-item" data-index="4" tabindex="0" role="button" aria-label="Ampliar: Área de descanso">
+        <div class="g-img"><img src="https://images.pexels.com/photos/635126/pexels-photo-635126.jpeg?auto=compress&cs=tinysrgb&h=800&w=1200" alt="Área de descanso" loading="lazy"></div>
+        <div class="g-shade"></div>
+        <div class="g-caption"><span>Instalaciones</span><p>Área de descanso</p></div>
+      </div>
+      <div class="g-item" data-index="5" tabindex="0" role="button" aria-label="Ampliar: Vista aérea del balneario">
+        <div class="g-img"><img src="https://images.pexels.com/photos/33836952/pexels-photo-33836952.jpeg?auto=compress&cs=tinysrgb&h=800&w=1200" alt="Vista aérea del balneario" loading="lazy"></div>
+        <div class="g-shade"></div>
+        <div class="g-caption"><span>Vistas</span><p>Vista aérea del balneario</p></div>
+      </div>
+      <div class="g-item" data-index="6" tabindex="0" role="button" aria-label="Ampliar: Resort tropical">
+        <div class="g-img"><img src="https://images.pexels.com/photos/19450437/pexels-photo-19450437.jpeg?auto=compress&cs=tinysrgb&h=800&w=1200" alt="Resort tropical" loading="lazy"></div>
+        <div class="g-shade"></div>
+        <div class="g-caption"><span>Instalaciones</span><p>Resort tropical</p></div>
+      </div>
+      <div class="g-item" data-index="7" tabindex="0" role="button" aria-label="Ampliar: Playa con palmera">
+        <div class="g-img"><img src="https://images.pexels.com/photos/18008982/pexels-photo-18008982.jpeg?auto=compress&cs=tinysrgb&h=800&w=1200" alt="Playa con palmera" loading="lazy"></div>
+        <div class="g-shade"></div>
+        <div class="g-caption"><span>Naturaleza</span><p>Playa con palmera</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lb-btn lb-close" id="lbClose" aria-label="Cerrar"><svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+    <button class="lb-btn lb-prev" id="lbPrev" aria-label="Anterior"><svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+    <button class="lb-btn lb-next" id="lbNext" aria-label="Siguiente"><svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+    <div class="lb-frame" id="lbFrame">
+      <img id="lbImg" src="" alt="">
+      <div class="lb-caption"><span id="lbCat"></span><p id="lbAlt"></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- UBICACION -->
+<section id="ubicacion" class="section location">
+  <div class="container">
+    <div class="sec-head">
+      <span class="pill">Cómo Llegar</span>
+      <h2 class="h2 mb-4">Encuéntranos en el<span class="teal"> paraíso</span></h2>
+      <p class="lead">Estamos ubicados en un punto privilegiado de la costa, de fácil acceso y rodeado de bellezas naturales.</p>
+    </div>
+    <div class="loc-grid">
+      <div class="map"><iframe title="Ubicación del Balneario Las Olas" src="https://www.openstreetmap.org/export/embed.html?bbox=-68.40%2C18.40%2C-68.30%2C18.50&amp;layer=mapnik&amp;marker=18.45%2C-68.35" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+      <div class="info-list">
+        <div class="info-card"><div class="info-icon"><svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div><div><h3>Dirección</h3><p>Carretera Costera Km 42<br>Costa Dorada, República Dominicana</p></div></div>
+        <div class="info-card"><div class="info-icon"><svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><h3>Horarios</h3><p>Lunes a Viernes: 8:00 AM - 7:00 PM<br>Sábados y Domingos: 7:00 AM - 8:00 PM</p></div></div>
+        <div class="info-card"><div class="info-icon"><svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div><h3>Teléfono</h3><p>+1 (809) 555-0142<br>reservas@balneariolasolas.com</p></div></div>
+        <a class="btn-route" href="https://www.openstreetmap.org/?mlat=18.45&amp;mlon=-68.35#map=14/18.45/-68.35" target="_blank" rel="noopener noreferrer"><svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>Cómo llegar</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="section contact bg-50">
+  <div class="wave-wrap"><svg class="wave-top" viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,40 C240,70 480,10 720,40 C960,70 1200,10 1440,40 L1440,0 L0,0 Z" fill="#e0f2fe"><animate attributeName="d" dur="8s" repeatCount="indefinite" values="M0,40 C240,70 480,10 720,40 C960,70 1200,10 1440,40 L1440,0 L0,0 Z;M0,50 C240,20 480,60 720,30 C960,10 1200,50 1440,20 L1440,0 L0,0 Z;M0,40 C240,70 480,10 720,40 C960,70 1200,10 1440,40 L1440,0 L0,0 Z"/></path></svg></div>
+  <div class="container narrow rel">
+    <div class="grid-2 contact-grid">
+      <div class="pt-8">
+        <span class="pill">Contáctanos</span>
+        <h2 class="h2 mb-6">Reserva tu<span class="teal"> escapada perfecta</span></h2>
+        <p class="lead mb-8">Estamos listos para recibirte. Envíanos tu consulta y te responderemos en menos de 24 horas con toda la información que necesitas.</p>
+        <div class="packages">
+          <h3><span class="dot"></span>Paquetes Disponibles</h3>
+          <div class="pkg"><div><p class="pkg-name">Día completo</p><p class="pkg-desc">Acceso a todas las piscinas</p></div><span class="pkg-price">$25</span></div>
+          <div class="pkg"><div><p class="pkg-name">Pareja</p><p class="pkg-desc">Entrada para dos + almuerzo</p></div><span class="pkg-price">$45</span></div>
+          <div class="pkg"><div><p class="pkg-name">Familiar</p><p class="pkg-desc">Hasta 4 personas + cabaña</p></div><span class="pkg-price">$80</span></div>
+        </div>
+      </div>
+      <div class="form-card">
+        <div class="success" id="success" hidden>
+          <div class="success-icon"><svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+          <h3>¡Mensaje enviado!</h3>
+          <p>Gracias por contactarnos. Te responderemos muy pronto.</p>
+        </div>
+        <form id="contactForm">
+          <h3 class="form-title">Envíanos un mensaje</h3>
+          <div class="field"><label for="name">Nombre completo</label><div class="input-wrap"><svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><input type="text" id="name" name="name" required placeholder="Tu nombre"></div></div>
+          <div class="field"><label for="email">Correo electrónico</label><div class="input-wrap"><svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><input type="email" id="email" name="email" required placeholder="tucorreo@ejemplo.com"></div></div>
+          <div class="field"><label for="date">Fecha de visita</label><div class="input-wrap"><svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg><input type="date" id="date" name="date" required></div></div>
+          <div class="field"><label for="message">Mensaje</label><div class="input-wrap textarea"><svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><textarea id="message" name="message" required rows="4" placeholder="Cuéntanos qué necesitas..."></textarea></div></div>
+          <button type="submit" class="btn-submit"><svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>Enviar Reserva</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wave-wrap"><svg class="wave-top" viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,40 C240,70 480,10 720,40 C960,70 1200,10 1440,40 L1440,0 L0,0 Z" fill="#f0f9ff"><animate attributeName="d" dur="8s" repeatCount="indefinite" values="M0,40 C240,70 480,10 720,40 C960,70 1200,10 1440,40 L1440,0 L0,0 Z;M0,50 C240,20 480,60 720,30 C960,10 1200,50 1440,20 L1440,0 L0,0 Z;M0,40 C240,70 480,10 720,40 C960,70 1200,10 1440,40 L1440,0 L0,0 Z"/></path></svg></div>
+  <div class="container footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="f-brand"><svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg><span class="logo-text"><span class="logo-name">Las Olas</span><span class="logo-sub teal4">Balneario</span></span></div>
+        <p class="f-text">Tu destino turístico de ensueño en la costa. Aguas cristalinas, naturaleza virgen y experiencias inolvidables te esperan.</p>
+        <div class="socials">
+          <a href="#" aria-label="Facebook"><svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+          <a href="#" aria-label="Twitter"><svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg></a>
+        </div>
+      </div>
+      <div><h3>Enlaces</h3><ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#ubicacion">Ubicación</a></li>
+      </ul></div>
+      <div><h3>Servicios</h3><ul>
+        <li><a href="#servicios">Piscinas Naturales</a></li>
+        <li><a href="#servicios">Aguas Termales</a></li>
+        <li><a href="#servicios">Restaurante</a></li>
+        <li><a href="#servicios">Cabañas Premium</a></li>
+        <li><a href="#servicios">Actividades</a></li>
+      </ul></div>
+      <div><h3>Contacto</h3><ul class="contact-list">
+        <li><svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Carretera Costera Km 42, Costa Dorada</span></li>
+        <li><svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>+1 (809) 555-0142</span></li>
+        <li><svg class="icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span>reservas@balneariolasolas.com</span></li>
+      </ul></div>
+    </div>
+    <div class="f-bottom">
+      <p>© 2026 Balneario Las Olas. Todos los derechos reservados.</p>
+      <div class="f-legal"><a href="#">Términos</a><a href="#">Privacidad</a><a href="#">Cookies</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
 </html>
